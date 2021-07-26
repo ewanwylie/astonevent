@@ -24,7 +24,7 @@ const PostSchema = new Schema({
     required: true
   },
   datetime: {
-    type: datetime,
+    type: Date,
     required: true
   },
   description: {
@@ -36,7 +36,7 @@ const PostSchema = new Schema({
       type: String
   },
   picture: {
-    type: Image
+    type: Object
   }
 })
 
