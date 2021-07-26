@@ -5,8 +5,6 @@ const passport = require('passport');
 
 // Load Validation
 const validateProfileInput = require('../../validation/profile');
-const validateExperienceInput = require('../../validation/experience');
-const validateEducationInput = require('../../validation/education');
 
 // Load Profile Model
 const Profile = require('../../models/Profile');
@@ -129,13 +127,6 @@ router.post(
     if (typeof req.body.skills !== 'undefined') {
       profileFields.skills = req.body.skills.split(',');
     }
-    // Social (optional fields)
-    profileFields.social = {};
-    if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-    if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-    if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-    if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
 
     // Create or Edit current user profile with unique handle
     Profile
@@ -145,7 +136,7 @@ router.post(
         
         // Create new profile
         if(!profile){
-          // Check if handle exists (handle should be unoque for all profile)
+          // Check if handle exists (handle should be unique for all profile)
           Profile
             .findOne({ handle: profileFields.handle})
             .then(profile => {
