@@ -1,0 +1,28 @@
+{
+  "name": "aston-events-website",
+  "version": "1.0.0",
+  "description": "Aston Events Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "author": "CodeMix",
+  "license": "ISC",
+  "dependencies": {
+	"lodash": "^4.17.14",
+    "lodash.template": "^4.5.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+	"react-scripts": "^2.1.5",
+	"react-responsive-carousel": "^3.1.49"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
