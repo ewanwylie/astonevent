@@ -1,6 +1,9 @@
 {
   "name": "aston-events-website",
   "version": "1.0.0",
+  "engines": {
+      "node": "10.x"
+    },
   "description": "Aston Events Website",
   "main": "index.js",
   "scripts": {
