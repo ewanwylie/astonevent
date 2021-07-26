@@ -19,7 +19,7 @@ const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(db, { useNewUrlParser: true }) // Let us remove that deprecation warrning :)
+  .connect(db, { useUnifiedTopology: true }, { useNewUrlParser: true }) // To get rid of Deprecation Warrning
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
