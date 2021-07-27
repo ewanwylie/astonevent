@@ -17,10 +17,12 @@
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.18.2",
+		"browserslist": "^4.16.6",
 		"concurrently": "^3.5.1",
 		"connect": "^3.7.0",
 		"dotenv": "^8.0.0",
 		"express": "^4.16.4",
+		"glob-parent": "^6.0.1",
 		"gravatar": "^1.6.0",
 		"jsonwebtoken": "^8.2.0",
 		"mongodb": "^3.2.7",
@@ -33,10 +35,10 @@
 		"react-dom": "^16.8.6",
 		"react-responsive-carousel": "^3.1.49",
 		"react-router-dom": "^5.0.1",
-		"react-scripts": "3.0.1",
+		"react-scripts": "^4.0.3",
 		"validator": "^9.4.1"
 	},
 	"devDependencies": {
-		"nodemon": "^1.19.1"
+		"nodemon": "^2.0.12"
 	}
 }
