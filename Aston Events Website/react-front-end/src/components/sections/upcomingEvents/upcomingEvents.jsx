@@ -2,53 +2,51 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css'
 
-class ListOfCompanies extends Component {
+class UpcomingEvents extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-      companies: [
+      events: [
         {
-          name: 'pasta', imgSrc: 'https://via.placeholder.com/150', description: 'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', numberOfOffers: 4,
+          category: 'Sport', name: 'Football', datetime: '28/07/2021 15:00', description: 'Insert text here', place: 'Birmingham', picture: 'https://via.placeholder.com/150'
+        },
+                
+        {
+          category: 'Sport', name: 'Football', datetime: '28/07/2021 15:00', description: 'Insert text here', place: 'Birmingham', picture: 'https://via.placeholder.com/150'
+        },
 
-        },
         {
-          name: 'pasta', imgSrc: 'https://via.placeholder.com/150', description: 'Many desktop publishing packages and web page editors now useas their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', numberOfOffers: 4
+          category: 'Sport', name: 'Football', datetime: '28/07/2021 15:00', description: 'Insert text here', place: 'Birmingham', picture: 'https://via.placeholder.com/150'
         },
+
         {
-          name: 'pasta', imgSrc: 'https://via.placeholder.com/150', description: 'Many desktop publishing packages and web page editors now useas their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', numberOfOffers: 4
-        },
-        {
-          name: 'pasta', imgSrc: 'https://via.placeholder.com/150', description: 'Many desktop publishing packages and web page editors now useas their default model text, and a search for  will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', numberOfOffers: 4
-        },
+          category: 'Sport', name: 'Football', datetime: '28/07/2021 15:00', description: 'Insert text here', place: 'Birmingham', picture: 'https://via.placeholder.com/150'
+        }
       ]
     })
   }
   render() {
-    const { name, description, numberOfOffers, publishedOn, applyBy } = this.state.companies;
+    const { category, name, datetime, description, place, picture } = this.state.events;
     return (
-      <section className="companiesSection">
-        <h2>List of Companies</h2>
-        {this.state.companies.map((company, index) => {
+      <section className="eventsSection">
+        <h2>List of Upcoming Events</h2>
+        {this.state.events.map((event) => {
           return (
 
-            <article className="company_details">
-              <div className="company_logo">
-                <img src={company.imgSrc} />
-              </div>
-              <div className="company_content">
-                <div className="name_descrip">
-                  <p><span>Company's Name: </span> <span className="bold">{company.name}</span></p>
-                  <p>Number of Opportunities: {company.numberOfOffers}</p>
-                </div>
-                <div className="comapny_descript"><span className="bold">Company Info : </span><span>{company.description}</span></div>
-                <div className="application_Date">
-                  <Link to="/Company" className="readMore_link"> <button className="readMore">Read More...</button>
-                  </Link>
-                </div>
-              </div>
+            <article className="event_details">
 
+              <div className="event_content">
+                <div className="category"><span className="bold">Company Info : </span><span>{event.category}</span></div>
+                <div className="name"><span className="bold">Company Info : </span><span>{event.name}</span></div>
+                <div className="datetime"><span className="bold">Company Info : </span><span>{event.datetime}</span></div>
+                <div className="description"><span className="bold">Company Info : </span><span>{event.description}</span></div>
+                <div className="description"><span className="bold">Company Info : </span><span>{event.place}</span></div>
+                <div className="event_picture">
+                  <img src={event.picture} />
+                </div>
+                <button className="interested">Interested?</button>
+              </div>
             </article>
-
           )
         })}
       </section>
@@ -56,4 +54,4 @@ class ListOfCompanies extends Component {
   }
 }
 
-export default ListOfCompanies
+export default UpcomingEvents

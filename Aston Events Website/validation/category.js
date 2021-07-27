@@ -1,4 +1,4 @@
-const Validator = require('validator');
+/*const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
 module.exports = function validateCategoryInput(data) {
@@ -21,3 +21,4 @@ module.exports = function validateCategoryInput(data) {
     isValid: isEmpty(errors)
   };
 };
+*/

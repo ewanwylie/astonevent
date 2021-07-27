@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import imgSrc from '../../images/cyf_brand.png'
 import './index.css'
 /* 
-Registration is for users to sign up  quickly with the minimum 
-info needed. Once a user is created theycan add to their profile
-via the Profile Edit to add fields:  
+Registration is for users to sign up  quickly with minimum 
+info needed. Once a user is created they can add to their profile
+via the Profile section to add fields:  
 */
 class Registration extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Registration extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      jobInterest: "",
+      phone: "",
       form: []
     };
   }
@@ -24,14 +24,14 @@ class Registration extends Component {
     });
   };
   handleSubmit = event => {
-    const { title, firstName, lastName, email, jobInterest } = this.state;
+    const { firstName, lastName, email, phone } = this.state;
     //Email validation
     if (!email.includes("@")) {
       return alert("Please enter Valid email");
     }
     //Creating JSON data for POST request to DB
     this.setState({
-      form: [{ title, firstName, lastName, email, jobInterest }]
+      form: [{ firstName, lastName, email, phone }]
     });
     event.preventDefault();
     fetch(`#`, {
@@ -45,27 +45,12 @@ class Registration extends Component {
         firstName: "",
         lastName: "",
         email: "",
-        jobInterest: []
+        phone: ""
       });
     });
   };
-  handleJobInterest = event => {
-    //checks if event is selected. If it is selected it is added to state, it unselected it is filtered out of array.
-    if (event.target.checked) {
-      this.setState({
-        jobInterest: [...this.state.jobInterest, event.target.value]
-      });
-    } else {
-      const jobInterest = this.state.jobInterest.filter(job => {
-        return job !== event.target.value;
-      });
-      this.setState({
-        jobInterest: jobInterest
-      });
-    }
-  };
   render() {
-    const { title, firstName, lastName, email } = this.state;
+    const { title, firstName, lastName, email, phone } = this.state;
     return (
       <section className="mainRegister">
         <div className="imgBlk"><img src={imgSrc} /></div>
@@ -132,70 +117,19 @@ class Registration extends Component {
                 />
               </label>
             </li>
-          </ul>
-          <p>I am Interested in:</p>
-          <ul className="interestArea">
             <li>
               <label>
-                <p>Front End Developer</p>
+
                 <input
-                  className="check"
-                  type="checkbox"
-                  name="front-end-developer"
-                  value="front-end-developer"
-                  onChange={this.handleJobInterest}
+                  placeholder="Mobile Number"
+                  name="phone"
+                  type="text"
+                  value={phone}
+                  onChange={this.handleChange}
+                  required
                 />
               </label>
             </li>
-            <li>
-              <label>
-                <p>Back End Developer</p>
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="back-end-developer"
-                  value="back-end-developer"
-                  onChange={this.handleJobInterest}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                <p>UX/UI Developer</p>
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="ux/ui-developer"
-                  value="ux/ui-developer"
-                  onChange={this.handleJobInterest}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                <p>Software Quality Assurance Analyst</p>
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="software-quality-assurance-analyst"
-                  value="software-quality-assurance-analyst"
-                  onChange={this.handleJobInterest}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                <p>Project Management</p>
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="project-management"
-                  value="project-management"
-                  onChange={this.handleJobInterest}
-                />
-              </label>
-            </li>
-            <input type="submit" className="btn" />
           </ul>
         </form>
       </section>

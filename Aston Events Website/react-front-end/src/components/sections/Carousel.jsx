@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './index.css'
-import cyf_picture01 from '../../images/cyf_picture01.JPG'
-import cyf_picture02 from '../../images/cyf_picture02.jpg'
-import cyf_picture03 from '../../images/cyf_picture03.jpg'
-import cyf_picture04 from '../../images/cyf_picture04.jpg'
-import cyf_picture05 from '../../images/cyf_picture05.jpg'
+import picture01 from '../../images/.jpg'
+import picture02 from '../../images/.jpg'
+import picture03 from '../../images/.jpg'
+import picture04 from '../../images/.jpg'
+import picture05 from '../../images/.jpg'
 
+//still to complete section
 
 class LazyCarousel extends Component {
   constructor(props) {
@@ -15,24 +16,24 @@ class LazyCarousel extends Component {
     this.state = {
       carouselInfos: [
         {
-          imgSrc: cyf_picture01,
-          legend: 'CYF Leadership'
+          imgSrc: picture01,
+          legend: 'jobby'
         },
         {
-          imgSrc: cyf_picture02,
-          legend: 'CYF at BBC Scotland'
+          imgSrc: picture02,
+          legend: 'cetch'
         },
         {
-          imgSrc: cyf_picture03,
-          legend: 'CYF course'
+          imgSrc: picture03,
+          legend: 'eree is'
         },
         {
-          imgSrc: cyf_picture04,
-          legend: 'CYF Ticketmaster session'
+          imgSrc: picture04,
+          legend: 'jiy'
         },
         {
-          imgSrc: cyf_picture05,
-          legend: 'CYF brain in action'
+          imgSrc: picture05,
+          legend: 'covid'
         }
       ]
 

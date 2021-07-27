@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LazyCarousel from './Carousel'
-import imgSrc from '../../images/cyf_brand.png'
+import imgSrc from '../../images/aston_uni.png'
 import './index.css';
 
 class LandingPage extends Component {

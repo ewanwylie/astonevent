@@ -4,10 +4,9 @@ import './App.css';
 import Nav from './components/header/Nav'
 import Footer from './components/footer/footer'
 import LandingPage from './components/sections/LandingPage'
-import ListOfCompanies from './components/sections/companies/ListOfCompanies'
-import Company from './components/sections/company/Company'
-import Opportunities from './components/sections/Opportunities'
-import Opportunity from './components/sections/Opportunity'
+import UpcomingEvents from './components/sections/upcomingEvents'
+import CreatAnEvent from './components/sections/createAnEvent'
+import Events from './components/sections/Events'
 import SignIn from './components/register/SignIn'
 import Register from './components/register/Register'
 
@@ -18,10 +17,9 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/company" exact component={Company} />
-          <Route path="/listOfCompanies" exact component={ListOfCompanies} />
-          <Route path="/opportunities" exact component={Opportunities} />
-          <Route path="/opportunity" exact component={Opportunity} />
+          <Route path="/upcomingEvents" exact component={UpcomingEvents} />
+          <Route path="/createAnEvent" exact component={CreatAnEvent} />
+          <Route path="/Events" exact component={Events} />
           <Route path="/signIn" exact component={SignIn} />
           <Route path="/Register" exact component={Register} />
         </Switch>

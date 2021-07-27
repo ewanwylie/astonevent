@@ -5,25 +5,25 @@ const mongodb = require("mongodb");
 const passport = require("passport");
 
 // Post model
-const Post = require("../../models/Post");
+const Post = require("../../models/Events");
 // Profile model
 const Profile = require("../../models/Profile");
 
 // Validation
-const validatePostInput = require("../../validation/post");
+const validatePostInput = require("../../validation/event");
 
 // @route   GET api/posts
 // @desc    Tests post route
 // @access  Public
 
-router.post("/", (req, res) => {
-  const newPost = new Post({
+router.event("/", (req, res) => {
+  const newEvent = new Event({
     user: req.body.user,
     // text: req.body.text,
     friendsName: req.body.friendsName,
     bestName: req.body.bestName
   });
-  newPost.save().then(Post => res.json(Post));
+  newEvent.save().then(Event => res.json(Event));
 });
 
 // @route   GET api/posts/get/
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
 // @access  Public
 
 router.get("/get/", (req, res) => {
-  Post.find().then(Post => res.json(Post));
+  Event.find().then(Event => res.json(Event));
 });
 
 // @route   DELETE api/posts/delete/id

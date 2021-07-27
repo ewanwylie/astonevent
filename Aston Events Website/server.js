@@ -14,6 +14,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//Return the index for any other GET request
+app.get('/*', function (req, res) {
+    res.sendFile('index.html', {root: path.join(__dirname, './react-front-end/public')});
+});
+
 // DB Config
 const db = require('./config/keys').mongoURI;
 
