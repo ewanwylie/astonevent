@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 const mongodb = require("mongodb");
 const passport = require("passport");
 
-// Post model
-const Post = require("../../models/Events");
+// Event model
+const Event = require("../../models/Events");
 // Profile model
-const Profile = require("../../models/Profile");
+const UserProfile = require("../../models/UserProfile");
 
 // Validation
-const validatePostInput = require("../../validation/event");
+const validateEventInput = require("../../validation/event");
 
 // @route   GET api/posts
 // @desc    Tests post route
@@ -20,8 +20,6 @@ router.event("/", (req, res) => {
   const newEvent = new Event({
     user: req.body.user,
     // text: req.body.text,
-    friendsName: req.body.friendsName,
-    bestName: req.body.bestName
   });
   newEvent.save().then(Event => res.json(Event));
 });

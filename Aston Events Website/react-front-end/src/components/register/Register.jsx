@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import imgSrc from '../../images/cyf_brand.png'
 import './index.css'
 /* 
-Registration is for users to sign up  quickly with minimum 
-info needed. Once a user is created they can add to their profile
-via the Profile section to add fields:  
+Registration is for users to sign up so they can then create events
 */
 class Registration extends Component {
   constructor(props) {
@@ -31,7 +29,7 @@ class Registration extends Component {
     }
     //Creating JSON data for POST request to DB
     this.setState({
-      form: [{ firstName, lastName, email, phone }]
+      form: [{ firstName, lastName, email, phone, password }]
     });
     event.preventDefault();
     fetch(`#`, {
@@ -45,12 +43,14 @@ class Registration extends Component {
         firstName: "",
         lastName: "",
         email: "",
-        phone: ""
+        phone: "",
+        password: "",
+        password2: ""
       });
     });
   };
   render() {
-    const { title, firstName, lastName, email, phone } = this.state;
+    const { title, firstName, lastName, email, phone, password } = this.state;
     return (
       <section className="mainRegister">
         <div className="imgBlk"><img src={imgSrc} /></div>
@@ -110,7 +110,7 @@ class Registration extends Component {
                 <input
                   placeholder="Email Address"
                   name="email"
-                  type="text"
+                  type="email"
                   value={email}
                   onChange={this.handleChange}
                   required
@@ -125,6 +125,32 @@ class Registration extends Component {
                   name="phone"
                   type="text"
                   value={phone}
+                  onChange={this.handleChange}
+                  required
+                />
+              </label>
+            </li>
+                        <li>
+              <label>
+
+                <input
+                  placeholder="Password"
+                  name="password"
+                  type="password"
+                  value={password}
+                  onChange={this.handleChange}
+                  required
+                />
+              </label>
+            </li>
+                        <li>
+              <label>
+
+                <input
+                  placeholder="Confirm Password"
+                  name="password2"
+                  type="password"
+                  value={password}
                   onChange={this.handleChange}
                   required
                 />

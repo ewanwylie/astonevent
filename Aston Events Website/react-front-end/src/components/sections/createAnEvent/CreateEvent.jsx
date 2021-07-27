@@ -10,7 +10,7 @@ class CreateEvent extends Component {
       name: "",
       datetime: "",
       description: "",
-	  place: "",
+	    place: "",
       picture: "",
       form: []
     };
@@ -40,7 +40,7 @@ class CreateEvent extends Component {
       name: "",
       datetime: "",
       description: "",
-	  place: "",
+	    place: "",
       picture: ""
       });
     });
@@ -65,7 +65,7 @@ class CreateEvent extends Component {
                   required
                 >
                   <option value="" disabled selected>
-                    Select your option
+                  Select category
                   </option>
                   <option value="sport">Sport</option>
                   <option value="culture">Culture</option>
@@ -75,7 +75,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-
+              *Event Name:
                 <input
                   placeholder="Name"
                   name="name"
@@ -88,7 +88,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-
+              *Event Description:
                 <input
                   placeholder="Description"
                   name="description"
@@ -101,7 +101,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-
+              *Where is the event:
                 <input
                   placeholder="Place"
                   name="place"
@@ -113,15 +113,16 @@ class CreateEvent extends Component {
               </label>
             </li>
             <li>
-              <label>
-
+              <label for="img">
+              Upload an optional image for your event:
                 <input
                   placeholder="Picture"
-                  name="picture"
-                  type="text"
+                  name="img"
+                  type="file"
+                  accept="image/*"
                   value={picture}
                   onChange={this.handleChange}
-                  required
+                  notrequired
                 />
               </label>
             </li>

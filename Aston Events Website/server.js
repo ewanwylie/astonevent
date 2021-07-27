@@ -5,8 +5,8 @@ const passport = require('passport');
 const path = require('path');
 
 const users = require('./routes/api/users');
-const profile = require('./routes/api/profile');
-const posts = require('./routes/api/posts');
+const userprofile = require('./routes/api/userprofile');
+const postevents = require('./routes/api/posts');
 
 const app = express();
 
@@ -30,8 +30,8 @@ mongoose
 
 // // Use Routes for each api
 app.use('/api/users', users);
-app.use('/api/profile', profile);
-app.use('/api/posts', posts);
+app.use('/api/userprofile', userprofile);
+app.use('/api/postevents', postevents);
 
 //connect on port 3000 
 const port = process.env.PORT || 3000;

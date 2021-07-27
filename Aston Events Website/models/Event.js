@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 // Create Schema for users to post events
 const EventSchema = new Schema({
-  category: [
+  category:
     {
-      sport: {
+      type: String,
+      required: true
+    },
+        /*  sport: {
         type: String,
         required: true
       },
@@ -16,9 +19,7 @@ const EventSchema = new Schema({
       other: {
         type: String,
         required: true
-      },
-    }
-  ],
+      },*/
   name: {
     type: String,
     required: true
