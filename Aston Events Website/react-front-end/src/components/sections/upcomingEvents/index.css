@@ -1,9 +1,9 @@
-.companiesSection {
+.eventsSection {
 	padding: 1rem;
 	text-align: center;
 }
 
-.company_details {
+.event_details {
 	width: 100%;
 	border: 2px solid;
 	display: flex;
@@ -12,7 +12,7 @@
 	margin-bottom: 1rem;
 }
 
-.company_content {
+.event_content {
 	flex: 2;
 	text-align: left;
 	display: flex;
@@ -20,31 +20,31 @@
 	justify-content: space-between;
 }
 
-.comapny_descript {
+.event_description {
 	margin: .5rem 0;
 	line-height: 1.5rem;
 }
 
-.name_descrip {
+.name_description {
 	display: flex;
 	justify-content: space-around;
 }
 
-.application_Date {
+.time_Date {
 	display: flex;
 	justify-content: space-around;
 }
 
-.company_logo {
+.event_logo {
 	width: 12%;
 }
 
-.company_link {
+.event_link {
 	color: rgb(39, 42, 27);
 	text-decoration: none;
 }
 
-.opportunity_details:hover {
+.event_details:hover {
 	background: #3E442B;
 	color: white;
 }

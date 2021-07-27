@@ -74,11 +74,11 @@
 	cursor: pointer;
 }
 
-.job_descip {
+.descip {
 	line-height: 1.5rem;
 	text-align: justify;
 }
 
-.job_descip p {
+.descip p {
 	margin: 1rem 0;
 }
