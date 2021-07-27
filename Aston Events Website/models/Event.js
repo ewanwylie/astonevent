@@ -32,7 +32,6 @@ const EventSchema = new Schema({
     type: String,
     required: true
   },
-
   place: {
       type: String
   },

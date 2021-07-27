@@ -1,25 +1,27 @@
 {
   "name": "aston-events-website",
   "version": "1.0.0",
+  "private": true,
   "engines": {
       "node": "10.x",
       "npm": "6.x"
     },
-  "description": "Aston Events Website",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "author": "CodeMix",
   "license": "ISC",
   "dependencies": {
 	"lodash": "^4.17.14",
-    "lodash.template": "^4.5.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+  "lodash.template": "^4.5.0",
+  "react": "^16.2.0",
+  "react-dom": "^16.2.0",
 	"react-scripts": "^2.1.5",
 	"react-responsive-carousel": "^3.1.49"
   },
