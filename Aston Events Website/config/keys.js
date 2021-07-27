@@ -1,4 +1,4 @@
 module.exports = {
-//MongoDB  dummy data user info
+//MongoDB connection
   mongoURI: 'mongodb+srv://guest:aston@astonevent.ymlc2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 };

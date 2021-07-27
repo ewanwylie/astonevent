@@ -10,7 +10,6 @@ function Nav() {
         <ul>
           <Link to="/" className="navStyle"><li>Home</li></Link>
           <Link to="/upcomingEvents" className="navStyle"> <li>Upcoming Events</li></Link>
-          <Link to="/Profile" className="navStyle"><li>Profile</li></Link>
           <Link to="/createEvent" className="navStyle"><li>Create An Event</li></Link>
         </ul>
       </nav>

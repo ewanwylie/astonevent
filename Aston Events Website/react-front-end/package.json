@@ -13,14 +13,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "author": "CodeMix",
-  "license": "ISC",
   "dependencies": {
 	"lodash": "^4.17.14",
   "lodash.template": "^4.5.0",

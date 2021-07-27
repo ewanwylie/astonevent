@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import imgSrc from '../../images/cyf_brand.png'
+import imgSrc from '../../images/aston_uni.png'
 import './index.css'
 /* 
 Registration is for users to sign up so they can then create events
@@ -22,7 +22,7 @@ class Registration extends Component {
     });
   };
   handleSubmit = event => {
-    const { firstName, lastName, email, phone } = this.state;
+    const { firstName, lastName, email, phone, password } = this.state;
     //Email validation
     if (!email.includes("@")) {
       return alert("Please enter Valid email");

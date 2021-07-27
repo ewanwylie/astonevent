@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './index.css'
 // import './index.css'
-import imgSrc from '../../images/cyf_brand.png'
+import imgSrc from '../../images/aston_uni.png'
 
 
 class SignIn extends Component {

@@ -10,7 +10,7 @@ class CreateEvent extends Component {
       name: "",
       datetime: "",
       description: "",
-	    place: "",
+      place: "",
       picture: "",
       form: []
     };
@@ -21,12 +21,12 @@ class CreateEvent extends Component {
     });
   };
   handleSubmit = event => {
-    const { category, name, description, place, picture } = this.state;
+    const { category, name, datetime, description, place, picture } = this.state;
 
 
     //Creating JSON data for POST request to DB
     this.setState({
-      form: [{ category, name, description, place, picture }]
+      form: [{ category, name, datetime, description, place, picture }]
     });
     event.preventDefault();
     fetch(`#`, {
@@ -36,17 +36,17 @@ class CreateEvent extends Component {
     }).then(res => {
       //Clearing Form
       this.setState({
-      category: "",
-      name: "",
-      datetime: "",
-      description: "",
-	    place: "",
-      picture: ""
+        category: "",
+        name: "",
+        datetime: "",
+        description: "",
+        place: "",
+        picture: ""
       });
     });
   };
   render() {
-    const { category, name, description, place, picture } = this.state;
+    const { category, name, datetime, description, place, picture } = this.state;
     return (
       <section className="createEvent">
         <div className="imgBlk"><img src={imgSrc} /></div>
@@ -75,7 +75,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-              *Event Name:
+                *Event Name:
                 <input
                   placeholder="Name"
                   name="name"
@@ -88,7 +88,20 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-              *Event Description:
+                *Event Date & Time:
+                <input
+                  placeholder="DateandTime"
+                  name="datetime"
+                  type="datetime-local"
+                  value={datetime}
+                  onChange={this.handleChange}
+                  required
+                />
+              </label>
+            </li>
+            <li>
+              <label>
+                *Event Description:
                 <input
                   placeholder="Description"
                   name="description"
@@ -101,7 +114,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label>
-              *Where is the event:
+                *Where is the event:
                 <input
                   placeholder="Place"
                   name="place"
@@ -114,7 +127,7 @@ class CreateEvent extends Component {
             </li>
             <li>
               <label for="img">
-              Upload an optional image for your event:
+                Upload an optional image for your event:
                 <input
                   placeholder="Picture"
                   name="img"

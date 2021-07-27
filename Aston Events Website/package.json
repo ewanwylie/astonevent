@@ -8,9 +8,9 @@
 		"npm": "6.x"
 	},
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/ewanwylie/astonevent.git"
-    },
+		"type": "git",
+		"url": "https://github.com/ewanwylie/astonevent.git"
+	},
 	"scripts": {
 		"start": "node server.js",
 		"server": "nodemon server.js",
@@ -40,6 +40,7 @@
 		"react-responsive-carousel": "^3.1.49",
 		"react-router-dom": "^5.0.1",
 		"react-scripts": "^4.0.3",
+		"server": "^1.0.34",
 		"validator": "^9.4.1"
 	},
 	"devDependencies": {
