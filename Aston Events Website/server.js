@@ -6,7 +6,7 @@ const path = require('path');
 
 const users = require('./routes/api/users');
 const userprofile = require('./routes/api/userprofile');
-const postevents = require('./routes/api/posts');
+const postevents = require('./routes/api/postevents');
 
 const app = express();
 

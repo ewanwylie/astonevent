@@ -5,18 +5,18 @@ const mongodb = require("mongodb");
 const passport = require("passport");
 
 // Event model
-const Event = require("../../models/Events");
+const Event = require("../../models/Event");
 // Profile model
 const UserProfile = require("../../models/UserProfile");
 
 // Validation
 const validateEventInput = require("../../validation/event");
 
-// @route   GET api/posts
+// @route   GET api/postevents
 // @desc    Tests post route
 // @access  Public
 
-router.event("/", (req, res) => {
+router.post("/", (req, res) => {
   const newEvent = new Event({
     user: req.body.user,
     // text: req.body.text,
