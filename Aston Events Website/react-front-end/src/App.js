@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import '../public/favicon.ico';
+import '../public/manifest.json';
 import Nav from './components/header/Nav'
 import Footer from './components/footer/footer'
 import LandingPage from './components/sections/LandingPage'
