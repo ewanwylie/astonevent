@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './index.css'
-import picture01 from '../../images/.jpg'
-import picture02 from '../../images/.jpg'
-import picture03 from '../../images/.jpg'
-import picture04 from '../../images/.jpg'
-import picture05 from '../../images/.jpg'
+//import picture01 from '../../images/.jpg'
+//import picture02 from '../../images/.jpg'
+//import picture03 from '../../images/.jpg'
+//import picture04 from '../../images/.jpg'
+//import picture05 from '../../images/.jpg'
 
 //still to complete section
 
@@ -16,23 +16,24 @@ class LazyCarousel extends Component {
     this.state = {
       carouselInfos: [
         {
-          imgSrc: picture01,
+          //picture01 etc...
+          imgSrc: 'https://via.placeholder.com/150',
           legend: 'jobby'
         },
         {
-          imgSrc: picture02,
+          imgSrc: 'https://via.placeholder.com/150',
           legend: 'cetch'
         },
         {
-          imgSrc: picture03,
+          imgSrc: 'https://via.placeholder.com/150',
           legend: 'eree is'
         },
         {
-          imgSrc: picture04,
+          imgSrc: 'https://via.placeholder.com/150',
           legend: 'jiy'
         },
         {
-          imgSrc: picture05,
+          imgSrc: 'https://via.placeholder.com/150',
           legend: 'covid'
         }
       ]

@@ -1,0 +1,62 @@
+.eventsSection {
+	padding: 1rem;
+	text-align: center;
+}
+
+.event_details {
+	width: 100%;
+	border: 2px solid;
+	display: flex;
+	justify-content: space-between;
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
+
+.event_content {
+	flex: 2;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.event_description {
+	margin: .5rem 0;
+	line-height: 1.5rem;
+}
+
+.name_description {
+	display: flex;
+	justify-content: space-around;
+}
+
+.time_Date {
+	display: flex;
+	justify-content: space-around;
+}
+
+.event_logo {
+	width: 12%;
+}
+
+.event_link {
+	color: rgb(39, 42, 27);
+	text-decoration: none;
+}
+
+.event_details:hover {
+	background: #3E442B;
+	color: white;
+}
+
+.readMore {
+	padding: .5rem;
+	background: #3E442B;
+	color: white;
+}
+
+.readMore:hover {
+	background: rgb(118, 129, 81);
+	color: rgb(40, 44, 28);
+	cursor: pointer;
+}

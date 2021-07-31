@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import imgSrc from '../../images/aston_uni.png'
+import imgSrc from '../../../images/aston_uni.png'
 import './index.css'
 
-class CreateEvent extends Component {
+class CreateAnEvent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -145,4 +145,4 @@ class CreateEvent extends Component {
     );
   }
 }
-export default CreateEvent;
+export default CreateAnEvent;

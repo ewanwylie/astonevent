@@ -20,7 +20,7 @@ npm install
 npm run server
 
 # Run the React client (front-end) only
-npm run server
+npm run client
 
 # Run the client & server (full application)
 npm run dev
