@@ -9,7 +9,6 @@ module.exports = function validateEventInput(data) {
   data.datetime = !isEmpty(data.datetime) ? data.datetime : '';
   data.description = !isEmpty(data.description) ? data.description : '';
   data.place = !isEmpty(data.place) ? data.place : '';
-  data.picture = !isEmpty(data.picture) ? data.picture : '';
 
 
   if (Validator.isEmpty(data.category)) {

@@ -13,6 +13,8 @@ class Registration extends Component {
       lastName: "",
       email: "",
       phone: "",
+      password: "",
+      password2: "",
       form: []
     };
   }
@@ -22,14 +24,14 @@ class Registration extends Component {
     });
   };
   handleSubmit = event => {
-    const { firstName, lastName, email, phone, password } = this.state;
+    const { firstName, lastName, email, phone, password, password2 } = this.state;
     //Email validation
     if (!email.includes("@")) {
       return alert("Please enter Valid email");
     }
     //Creating JSON data for POST request to DB
     this.setState({
-      form: [{ firstName, lastName, email, phone, password }]
+      form: [{ firstName, lastName, email, phone, password, password2 }]
     });
     event.preventDefault();
     fetch(`#`, {
@@ -50,7 +52,7 @@ class Registration extends Component {
     });
   };
   render() {
-    const { title, firstName, lastName, email, phone, password } = this.state;
+    const { title, firstName, lastName, email, phone, password, password2 } = this.state;
     return (
       <section className="mainRegister">
         <div className="imgBlk"><img src={imgSrc} /></div>
@@ -123,7 +125,7 @@ class Registration extends Component {
                 <input
                   placeholder="Mobile Number"
                   name="phone"
-                  type="text"
+                  type="number"
                   value={phone}
                   onChange={this.handleChange}
                   required
@@ -150,7 +152,7 @@ class Registration extends Component {
                   placeholder="Confirm Password"
                   name="password2"
                   type="password"
-                  value={password}
+                  value={password2}
                   onChange={this.handleChange}
                   required
                 />
