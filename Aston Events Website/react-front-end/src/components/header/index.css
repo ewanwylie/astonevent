@@ -67,10 +67,6 @@
 		height: 12rem;
 		justify-content: space-around;
 	}
-	.searchBar {
-		width: 60%;
-		text-align: center;
-	}
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1200px) {

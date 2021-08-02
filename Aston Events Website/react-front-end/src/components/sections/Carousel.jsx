@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import './index.css'
-//import picture01 from '../../images/.jpg'
-//import picture02 from '../../images/.jpg'
-//import picture03 from '../../images/.jpg'
-//import picture04 from '../../images/.jpg'
-//import picture05 from '../../images/.jpg'
+import picture01 from '../../images/picture01.jpg'
+import picture02 from '../../images/picture02.jpg'
+import picture03 from '../../images/picture03.jpg'
+import picture04 from '../../images/picture04.jpg'
+import picture05 from '../../images/picture05.jpg'
 
 //still to complete section
 
@@ -16,25 +16,24 @@ class LazyCarousel extends Component {
     this.state = {
       carouselInfos: [
         {
-          //picture01 etc...
-          imgSrc: 'https://via.placeholder.com/150',
-          legend: 'jobby'
+          imgSrc: picture01,
+          legend: 'Aston Students Union'
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
-          legend: 'cetch'
+          imgSrc: picture02,
+          legend: 'Clubs'
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
-          legend: 'eree is'
+          imgSrc: picture03,
+          legend: 'Sports'
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
-          legend: 'jiy'
+          imgSrc: picture04,
+          legend: 'Fundraise'
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
-          legend: 'covid'
+          imgSrc: picture05,
+          legend: 'Volunteer'
         }
       ]
 

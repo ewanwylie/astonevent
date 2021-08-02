@@ -62,7 +62,7 @@ class Registration extends Component {
           <ul>
             <li>
               <label>
-                *Title:
+                *Title: 
                 <select
                   className="select"
                   name="title"
@@ -82,7 +82,7 @@ class Registration extends Component {
             </li>
             <li>
               <label>
-
+                *First Name: 
                 <input
                   placeholder="First Name"
                   name="firstName"
@@ -95,7 +95,7 @@ class Registration extends Component {
             </li>
             <li>
               <label>
-
+                *Last Name: 
                 <input
                   placeholder="Last Name"
                   name="lastName"
@@ -108,7 +108,7 @@ class Registration extends Component {
             </li>
             <li>
               <label>
-
+                *E-mail Address: 
                 <input
                   placeholder="Email Address"
                   name="email"
@@ -121,7 +121,7 @@ class Registration extends Component {
             </li>
             <li>
               <label>
-
+                *Mobile Number: 
                 <input
                   placeholder="Mobile Number"
                   name="phone"
@@ -132,9 +132,9 @@ class Registration extends Component {
                 />
               </label>
             </li>
-                        <li>
+            <li>
               <label>
-
+                *Password: 
                 <input
                   placeholder="Password"
                   name="password"
@@ -145,9 +145,9 @@ class Registration extends Component {
                 />
               </label>
             </li>
-                        <li>
+            <li>
               <label>
-
+                *Confirm Password: 
                 <input
                   placeholder="Confirm Password"
                   name="password2"

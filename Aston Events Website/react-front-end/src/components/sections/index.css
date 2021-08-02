@@ -34,22 +34,6 @@
 	padding: 1rem 0;
 }
 
-.info {
-	display: flex;
-}
-
-.info p {
-	text-align: justify;
-	margin-top: 1rem;
-}
-
-.About, .ourEvents {
-	width: 100%;
-	text-align: center;
-	padding: 2rem;
-	line-height: 1.4rem;
-}
-
 .opp_main {
 	min-height: 60vh;
 	width: 80%;
@@ -60,6 +44,20 @@
 	padding: 1rem;
 	border: 2px solid;
 	margin: 1rem auto;
+}
+
+.info{
+  display: flex;
+}
+.info p{
+  text-align: justify;
+  margin-top: 1rem;
+}
+.About, .ourEvents{
+  width: 100%;
+   text-align: center;
+    padding: 2rem;
+    line-height: 1.4rem;
 }
 
 .apply {

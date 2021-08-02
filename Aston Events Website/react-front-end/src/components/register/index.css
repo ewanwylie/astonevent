@@ -25,6 +25,10 @@ label input {
 	font-size: 20px;
 }
 
+label {
+	padding: 1rem 0;
+}
+
 .btn {
 	border: none;
 	border-radius: 10px;

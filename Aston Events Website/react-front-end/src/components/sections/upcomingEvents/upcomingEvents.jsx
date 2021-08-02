@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import imgSrc from '../../../images/aston_uni.png'
 import './index.css'
 
 class UpcomingEvents extends Component {
@@ -50,7 +51,7 @@ class UpcomingEvents extends Component {
                 <div className="description"><span className="bold">Description : </span><span>{event.description}</span></div>
                 <div className="place"><span className="bold">Location: </span><span>{event.place}</span></div>
                 <div className="event_picture">
-                  <img src={event.picture} />
+                <img src={event.picture} />
                 </div>
                 <button className="interestranking">Interested?</button>
               </div>
