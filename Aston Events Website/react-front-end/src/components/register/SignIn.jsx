@@ -48,7 +48,7 @@ class SignIn extends Component {
         <div className="imgBlk"><img src={imgSrc} /></div>
 
         <h3>Sign In</h3>
-        <form onSubmit={this.handleSubmit} className="registerForm">
+        <form onSubmit={this.handleSubmit} className="signinForm">
           <ul>
             <li>
               <label>
