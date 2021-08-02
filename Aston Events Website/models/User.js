@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 // Create Schema for user information
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -29,4 +28,5 @@ const UserSchema = new Schema({
   },
 });
 
-module.exports = User = mongoose.model('users', UserSchema);
+const User = mongoose.model('User', UserSchema);
+module.exports = User;

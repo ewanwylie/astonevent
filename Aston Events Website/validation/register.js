@@ -57,8 +57,7 @@ module.exports = function validateRegisterInput(data) {
     errors.password = 'Password meets requirements';
   } else {
     errors.password = 'Password must be at least 8 characters, have one uppercase letter, one lowercase letter, one number and one symbol'
-  
-
+  }
   if (Validator.isEmpty(data.password2)) {
     errors.password2 = 'Confirm Password field is required';
   } else {
@@ -70,5 +69,5 @@ module.exports = function validateRegisterInput(data) {
   return {
     errors,
     isValid: isEmpty(errors)
-  };
-};
+  }
+}

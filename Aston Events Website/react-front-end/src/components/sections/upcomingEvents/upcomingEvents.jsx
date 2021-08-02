@@ -40,20 +40,19 @@ class UpcomingEvents extends Component {
       return (
         <section className="eventsSection">
           <h2>List of Upcoming Events</h2>
-          {this.state.events.map((event) => {
+          {this.state.events.map((events, index) => {
 
             <article className="event_details">
 
               <div className="event_content">
-                <div className="category"><span className="bold">Category : </span><span>{event.category}</span></div>
-                <div className="name"><span className="bold">Event Name : </span><span>{event.name}</span></div>
-                <div className="datetime"><span className="bold">Date & Time : </span><span>{event.datetime}</span></div>
-                <div className="description"><span className="bold">Description : </span><span>{event.description}</span></div>
-                <div className="place"><span className="bold">Location: </span><span>{event.place}</span></div>
+                <div className="category"><span className="bold">Category : </span><span>{events.category}</span></div>
+                <div className="name"><span className="bold">Event Name : </span><span>{events.name}</span></div>
+                <div className="datetime"><span className="bold">Date & Time : </span><span>{events.datetime}</span></div>
+                <div className="description"><span className="bold">Description : </span><span>{events.description}</span></div>
+                <div className="place"><span className="bold">Location: </span><span>{events.place}</span></div>
                 <div className="event_picture">
-                <img src={event.picture} />
+                <img src={events.picture} />
                 </div>
-                <button className="interestranking">Interested?</button>
               </div>
             </article>
           })}

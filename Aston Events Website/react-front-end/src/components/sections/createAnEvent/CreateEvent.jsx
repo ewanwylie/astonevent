@@ -126,13 +126,15 @@ class CreateAnEvent extends Component {
               </label>
             </li>
             <li>
-              <label for="img">
+              <label for="formFile">
                 Upload an optional image for your event:
                 <input
+                  class="form-control"
                   placeholder="Picture"
                   name="img"
                   type="file"
-                  accept="image/*"
+                  id="formFile"
+                  multiple accept="image/jpg, image/jpeg"
                   value={picture}
                   onChange={this.handleChange}
                   notrequired

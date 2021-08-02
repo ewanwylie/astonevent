@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './index.css'
-// import './index.css'
 import imgSrc from '../../images/aston_uni.png'
 
 
@@ -22,7 +21,7 @@ class SignIn extends Component {
     const { email, password } = this.state;
     //Data Validation
     if (!email.includes("@")) {
-      return alert("Please enter Valid email");
+      return alert("Please enter valid email");
     }
     //Creating JSON form to send to DB
     this.setState({

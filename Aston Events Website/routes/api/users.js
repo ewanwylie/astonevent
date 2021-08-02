@@ -12,11 +12,11 @@ const Event = require("../../models/Event");
 //@route   GET api/users
 //@desc    Tests users route
 //@access  Public
-router.get('/', (req, res) => res.json({ msg: 'Users Works' }));
+//router.get('/', (req, res) => res.json({ msg: 'Users Works' }));
 
-router.get('/',(req,res) =>  {
-User.find()
-.then(users => res.json(users));
- });
+//router.get('/',(req,res) =>  {
+//User.find()
+//.then(users => res.json(users));
+//});
 
 module.exports = router;

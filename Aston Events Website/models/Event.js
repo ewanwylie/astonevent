@@ -1,25 +1,24 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 // Create Schema for users to post events
-const EventSchema = new Schema({
+const EventSchema = new mongoose.Schema({
   category:
-    {
-      type: String,
-      required: true
-    },
-        /*  sport: {
-        type: String,
-        required: true
-      },
-      culture: {
-        type: String,
-        required: true
-      },
-      other: {
-        type: String,
-        required: true
-      },*/
+  {
+    type: String,
+    required: true
+  },
+  /*  sport: {
+  type: String,
+  required: true
+},
+culture: {
+  type: String,
+  required: true
+},
+other: {
+  type: String,
+  required: true
+},*/
   name: {
     type: String,
     required: true
@@ -33,11 +32,15 @@ const EventSchema = new Schema({
     required: true
   },
   place: {
-      type: String
+    type: String,
+    require: true
   },
   picture: {
-    type: Object
+    type: Array,
+    require: false
   }
 })
 
-module.exports = Post = mongoose.model('events', EventSchema);
+const Event = mongoose.model('events', EventSchema);
+
+module.exports = Event;
