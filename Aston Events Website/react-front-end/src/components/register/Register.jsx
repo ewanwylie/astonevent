@@ -156,6 +156,7 @@ class Registration extends Component {
                 />
               </label>
             </li>
+            <input type="submit" className="btn" />
           </ul>
         </form>
       </section>
